@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, Blueprint
 from project import db
-from project.models import Club
+from project.clubs.models import Club
 from project.clubs.forms import CreateClub
 
 clubs = Blueprint('clubs', __name__)
