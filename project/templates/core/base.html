@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Blueprints</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('clubs.create_club') }}">Create club</a>
+        <a href="{{ url_for('clubs.list_clubs') }}">Clubs</a>
+    </nav>
+    <br><br>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
