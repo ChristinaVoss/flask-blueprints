@@ -3,7 +3,7 @@ from project import db
 from project.clubs.models import Club
 from project.clubs.forms import CreateClub
 
-clubs = Blueprint('clubs', __name__)
+clubs = Blueprint('clubs', __name__, template_folder='templates')
 
 # CREATE NEW CLUB
 @clubs.route('/create_club.html', methods=['GET', 'POST'])
