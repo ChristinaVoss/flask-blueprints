@@ -1,8 +1,8 @@
-from flask import render_template, url_for, redirect, Blueprint
+from flask import render_template, Blueprint
 
 core = Blueprint('core', __name__, template_folder='templates')
 
-# CREATE NEW CLUB
-@core.route('/', methods=['GET', 'POST'])
+# INDEX
+@core.route('/')
 def index():
     return render_template('index.html')
