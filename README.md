@@ -6,7 +6,7 @@ This repo ties together much of what has been demonstrated in the other Flask de
 
 **Top level (in flask-blueprints folder)**
 
-At the top level of the app we have app.py, which is now only used to run the app. There is also an added directory "project" to hold all the logic. Flask migrate auto-creates a "migrations" directory that we don't manually update/touch so just ignore it (and any pycache, .sqlite or .git files).
+At the top level of the app we have app.py, which is now only used to run the app. There is also an added directory "project" to hold all the actual logic of the application. Flask migrate auto-creates a "migrations" directory that we don't manually update/touch so just ignore it (and any pycache, .sqlite or .git files).
 
 **In project folder**
 
