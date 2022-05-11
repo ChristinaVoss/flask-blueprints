@@ -8,7 +8,7 @@ This repo ties together much of what has been demonstrated in the other Flask de
 
 At the top level of the app we have app.py, which is now only used to run the app. There is also an added directory "project" to hold all the actual logic of the application. Flask migrate auto-creates a "migrations" directory that we don't manually update/touch so just ignore it (and any pycache, .sqlite or .git files).
 
-**In project folder**
+**In project directory**
 
 Our app now consists of:
 
@@ -18,21 +18,21 @@ Our app now consists of:
 - A sqlite file (ignore, but keep)
 
 
-**In clubs folder**
+**In clubs directory**
 
 The clubs blueprint. An extension to the app that includes:
 
-- A templates folder (for all templates related to clubs)
+- A templates directory (for all templates related to clubs)
 - An empty `__init__.py` file (needed by Flask to know that it needs to add this part to the app)
 - A forms.py file for all club related forms
 - A models.py file for all club related models
 - A views.py file for the controllers (they define what the views (templates) will display). Define the blueprint here.
 
-**In core folder**
+**In core directory**
 
 The core blueprint. An extension to the app that includes:
 
-- A templates folder (for all templates and parts that will be shared across the app)
+- A templates directory (for all templates and parts that will be shared across the app)
 - An empty `__init__.py` file (needed by Flask to know that it needs to add this part to the app)
 - A views.py file for the controllers (they define what the views (templates) will display). Define the blueprint here.
 
