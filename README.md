@@ -4,7 +4,7 @@ This repo ties together much of what has been demonstrated in the other Flask de
 
 ### App structure
 
-<img width="713" alt="Screenshot 2022-05-12 at 09 29 26" src="https://user-images.githubusercontent.com/20923607/168027313-700ed7d1-9537-4cf0-bd02-f500dd4fb6f2.png">
+<img width="695" alt="Screenshot 2022-05-12 at 09 31 21" src="https://user-images.githubusercontent.com/20923607/168027609-de48ccd7-fb77-4e9b-bac3-ed6aa4523110.png">
 
 
 
