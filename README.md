@@ -4,37 +4,8 @@ This repo ties together much of what has been demonstrated in the other Flask de
 
 ### App structure
 
-**Top level (in flask-blueprints folder)**
+<img width="713" alt="Screenshot 2022-05-12 at 09 29 26" src="https://user-images.githubusercontent.com/20923607/168027313-700ed7d1-9537-4cf0-bd02-f500dd4fb6f2.png">
 
-At the top level of the app we have app.py, which is now only used to run the app. There is also an added directory "project" to hold all the actual logic of the application. Flask migrate auto-creates a "migrations" directory that we don't manually update/touch so just ignore it (and any pycache, .sqlite or .git files).
-
-**In project directory**
-
-Our app now consists of:
-
-- A clubs directory (the "clubs" blueprint - holds all code related to clubs)
-- A core directory (holds all code to common/core elements)
-- An `__init__.py` file (where the app and database is configured and blueprints are registered)
-- A sqlite file (ignore, but keep)
-
-
-**In clubs directory**
-
-The clubs blueprint. An extension to the app that includes:
-
-- A templates directory (for all templates related to clubs)
-- An empty `__init__.py` file (needed by Flask to know that it needs to add this part to the app)
-- A forms.py file for all club related forms
-- A models.py file for all club related models
-- A views.py file for the controllers (they define what the views (templates) will display). Define the blueprint here.
-
-**In core directory**
-
-The core blueprint. An extension to the app that includes:
-
-- A templates directory (for all templates and parts that will be shared across the app)
-- An empty `__init__.py` file (needed by Flask to know that it needs to add this part to the app)
-- A views.py file for the controllers (they define what the views (templates) will display). Define the blueprint here.
 
 
 ### Setup
