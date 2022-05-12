@@ -39,3 +39,18 @@ Then install Flask, Flask-SQLAlchemy, Flask-Migrate, and also WTForms (because w
 You should now be able to see the output in your browser window (at http://127.0.0.1:5000) 
 
 ### Resulting pages
+
+**index.html**
+
+<img width="516" alt="Screenshot 2022-05-12 at 18 12 32" src="https://user-images.githubusercontent.com/20923607/168131471-ef14e357-2046-45be-b93f-afdd408114a4.png">
+
+**create_club.html**
+
+<img width="517" alt="Screenshot 2022-05-12 at 18 12 43" src="https://user-images.githubusercontent.com/20923607/168131487-d1b2c3e3-7472-4aea-a110-d318c3946783.png">
+
+
+**clubs.html**
+
+<img width="518" alt="Screenshot 2022-05-12 at 18 13 00" src="https://user-images.githubusercontent.com/20923607/168131506-962c56fe-e12e-487e-a344-10bbb5291a11.png">
+
+
