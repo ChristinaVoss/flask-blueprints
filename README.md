@@ -6,7 +6,52 @@ This repo ties together much of what has been demonstrated in the other Flask de
 
 <img width="695" alt="Screenshot 2022-05-12 at 09 31 21" src="https://user-images.githubusercontent.com/20923607/168027609-de48ccd7-fb77-4e9b-bac3-ed6aa4523110.png">
 
+**Key parts**
 
+app.py is now just the entry point to the app, and all code related to making the app is placed in a project directory. Because we no longer configure everything at top level, Flask will look for an `__init__.py` file inside project directory. We'll place all the configurations for our app there. We then have a clubs directory, which holds the 'clubs' blueprint, and a core directory for the 'core' blueprint.
+
+In clubs/views.py
+
+Import your required methods from flask, including the Blueprint contstructor:
+
+`from flask import render_template, url_for, redirect, Blueprint`
+
+Import your configured database (when you look in a directory, like 'project', Flask will look for the `__init__.py file):
+
+`from project import db`
+
+Then import any models and forms you may have in this blueprint directory:
+```
+from project.clubs.models import Club
+from project.clubs.forms import CreateClub
+```
+
+Fianlly, define your blueprint (and if you have a template folder in your blueprint as we have in this example, tell flask where to find it with 'template_folder='):
+
+`clubs = Blueprint('clubs', __name__, template_folder='templates')`
+
+Now you use @clubs.route() instead of @app.route() in this blueprint. Do the same for the core blueprint, or any other your define.
+
+
+In `__init__.py`:
+
+Import and register the blueprints to the app:
+
+```
+from project.core.views import core
+from project.clubs.views import clubs
+
+app.register_blueprint(core)
+app.register_blueprint(clubs)
+```
+
+In app.py:
+
+Import the app so that you can run it:
+
+`from project import app`
+
+And that's it! Now you have a fully modularised app. In most demos and tutorials, the templates and models are kept outside the blueprints, but I thought it could be useful to see them fully encapsulated, so that they truly are mini-apps that extend your app, rather than have some of their code in the blueprint, and some out.
 
 ### Setup
 
